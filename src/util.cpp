@@ -25,7 +25,7 @@ void connected_components(cv::Mat &m) {
 
 Rect get_cropping_box(const Mat &img) {
   Mat _img;
-  cvtColor(img, _img, CV_BGR2GRAY);
+  cvtColor(img, _img, cv::COLOR_BGR2GRAY);
 
   vector<Point> inside;
   for (auto it = _img.begin<uint8_t>(); it != _img.end<uint8_t>(); ++it)
